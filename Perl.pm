@@ -1,12 +1,14 @@
 
 package Term::Size::Perl;
 
+use strict;
+
 require Exporter;
 
 our @ISA = qw(Exporter);
 our @EXPORT_OK = qw(chars pixels);
 
-our $VERSION = 0.01;
+our $VERSION = 0.02;
 
 =head1 NAME
 
@@ -24,6 +26,35 @@ Term::Size::Perl - Perl extension for retrieving terminal size (Perl version)
 Yet another implementation of C<Term::Size>. Now
 in pure Perl, with the exception of a C probe run
 on build time.
+
+=head2 FUNCTIONS
+
+=over 4
+
+=item B<chars>
+
+    ($columns, $rows) = chars($h);
+    $columns = chars($h);
+
+C<chars> returns the terminal size in units of characters
+corresponding to the given filehandle C<$h>.
+If the argument is ommitted, C<*STDIN{IO}> is used.
+In scalar context, it returns the terminal width.
+, whereas Term::Size::pixels uses units of pixels.
+
+=item B<pixels>
+
+    ($x, $y) = pixels($h);
+    $x = pixels($h);
+
+C<pixels> returns the terminal size in units of pixels
+corresponding to the given filehandle C<$h>.
+If the argument is ommitted, C<*STDIN{IO}> is used.
+In scalar context, it returns the terminal width.
+
+Many systems with character-only terminals will return C<(0, 0)>.
+
+=back
 
 =head1 SEE ALSO
 

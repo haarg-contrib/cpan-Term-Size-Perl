@@ -112,7 +112,12 @@ use vars qw(\$VERSION);
 
 \=head1 Term::Size::Perl::Params
 
-FIXME
+\=head2 params
+
+    \$href = Term::Size::Perl::Params
+
+The configuration parameters C<Term::Size::Perl> needs to
+know for retrieving the terminal size with C<ioctl>.
 
 \=cut
 

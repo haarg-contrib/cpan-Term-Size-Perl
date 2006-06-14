@@ -1,7 +1,7 @@
-This is alpha release 0.01 of Term::Size::Perl.
+This is alpha release 0.02 of Term::Size::Perl.
 
 Term::Size::Perl is a Perl module which provides a straightforward 
-way to get the size of the Win32 terminal (or window) on which 
+way to get the size of the terminal (or window) on which 
 a script is running.
 
 After building/installing, this module does it job 
@@ -11,4 +11,4 @@ via compiling/running a C code which gets the needed
 information for driving Perl ioctl() in the specific
 machine.
 
-Adriano Ferreira <ferreira@cpan.org> May 29 2006
+Adriano Ferreira <ferreira@cpan.org> Jun 14 2006
