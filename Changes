@@ -1,6 +1,10 @@
 Revision history for Perl extension Term-Size-Perl.
 
-0.02  Wed Jun 142 2006
+0.0201 Tue Nov 7 2006
+        - section BUGS on Perl.pm
+        - no code changes
+
+0.02  Wed Jun 14 2006
         - use strict
         - tweaked POD
         - introduced a POD coverage test

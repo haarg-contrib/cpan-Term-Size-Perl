@@ -21,12 +21,13 @@ WriteMakefile(
         'ABSTRACT_FROM' => 'Perl.pm',
         'AUTHOR'        => 'Adriano R. Ferreira <ferreira@cpan.org>'
     ) : ()),
-    ($EUMM_VERSION >= 6.30_01 ? (
+    ($EUMM_VERSION >= 6.31 ? (
         LICENSE => 'perl', 
 #        EXTRA_META => "no_index:\n    file:\n        - inc/Probe.pm\n"
     ) :()),
 
     PREREQ_PM     => {
+        Exporter              => 0,
         ExtUtils::CBuilder    => 0, # build
         Test::More            => 0, # build
     }, 
@@ -37,5 +38,3 @@ WriteMakefile(
     clean => { FILES => "Params.pm" },
 
 );
-
-
