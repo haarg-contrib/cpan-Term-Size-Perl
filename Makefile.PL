@@ -24,6 +24,7 @@ WriteMakefile(
     ($EUMM_VERSION >= 6.31 ? (
         LICENSE => 'perl', 
 #        EXTRA_META => "no_index:\n    file:\n        - inc/Probe.pm\n"
+#        EXTRA_META => { recommends => { 'ExtUtils::Manifest' => 1.50 } },
     ) :()),
 
     PREREQ_PM     => {

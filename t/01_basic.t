@@ -1,23 +1,46 @@
 
-use Test::More tests => 6;
+use Test::More tests => 17;
+#use Test::More no_plan => 1;
 
 BEGIN { use_ok('Term::Size::Perl'); }
 
-@chars = Term::Size::Perl::chars;
-ok(@chars == 2);
+my @handles = (
+    # name args handle
+    [ 'implicit STDIN', [], *STDIN ], # default: implicit STDIN
+    [ 'STDIN', [*STDIN], *STDIN ],
+    [ 'STDERR', [*STDERR], *STDERR ],
+    [ 'STDOUT', [*STDOUT], *STDOUT ],
+);
 
-@chars1 = Term::Size::Perl::chars *STDERR;
-is_deeply([@chars], [@chars1]);
+for (@handles) {
+    my $h_name = $_->[0];
+    my @args = @{$_->[1]};
+    my $h = $_->[2];
 
-$cols = Term::Size::Perl::chars;
-is($cols, $chars[0]);
+SKIP: {
+    skip "$h_name is not tty", 4 unless -t $h;
 
-@pixels = Term::Size::Perl::pixels;
-ok(@pixels==2);
+    my @chars = Term::Size::Perl::chars @args;
+    is(scalar @chars, 2, "$h_name: chars return (cols, rows) - $h_name");
 
-$x = Term::Size::Perl::pixels;
-ok($x == $pixels[0]);
+    my $cols = Term::Size::Perl::chars @args;
+    is($cols, $chars[0], "$h_name: chars return cols");
 
-diag("This terminal is $chars[0]x$chars[1] characters,"),
-diag("  and $pixels[0]x$pixels[1] pixels.");
+    my @pixels = Term::Size::Perl::pixels @args;
+    is(scalar @pixels, 2, "$h_name: pixels return (x, y)");
 
+    my $x = Term::Size::Perl::pixels @args;
+    is($x, $pixels[0], "$h_name: pixels return x");
+
+}
+
+}
+
+if (-t STDIN) {
+    # this is not at test, only a show-off
+    my @chars = Term::Size::Perl::chars;
+    my @pixels = Term::Size::Perl::pixels;
+    diag("This terminal is $chars[0]x$chars[1] characters,"),
+    diag("             and $pixels[0]x$pixels[1] pixels.");
+
+}
