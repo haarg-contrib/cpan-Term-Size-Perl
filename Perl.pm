@@ -38,7 +38,7 @@ on build time.
 
 C<chars> returns the terminal size in units of characters
 corresponding to the given filehandle C<$h>.
-If the argument is ommitted, C<*STDIN{IO}> is used.
+If the argument is omitted, C<*STDIN{IO}> is used.
 In scalar context, it returns the terminal width.
 
 =item B<pixels>
@@ -48,7 +48,7 @@ In scalar context, it returns the terminal width.
 
 C<pixels> returns the terminal size in units of pixels
 corresponding to the given filehandle C<$h>.
-If the argument is ommitted, C<*STDIN{IO}> is used.
+If the argument is omitted, C<*STDIN{IO}> is used.
 In scalar context, it returns the terminal width.
 
 Many systems with character-only terminals will return C<(0, 0)>.
