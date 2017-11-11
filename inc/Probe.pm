@@ -108,7 +108,7 @@ package Term::Size::Perl::Params;
 # created @{[scalar localtime]}
 
 use vars qw(\$VERSION);
-\$VERSION = @{[MM->parse_version('Perl.pm')]};
+\$VERSION = '@{[MM->parse_version('Perl.pm')]}';
 
 sub params {
     return (
