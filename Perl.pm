@@ -94,7 +94,7 @@ A. R. Ferreira, E<lt>ferreira@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2006-2007 by A. R. Ferreira
+Copyright (C) 2006-2007, 2017-2018 by A. R. Ferreira
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
