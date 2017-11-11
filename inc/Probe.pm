@@ -110,21 +110,6 @@ package Term::Size::Perl::Params;
 use vars qw(\$VERSION);
 \$VERSION = @{[MM->parse_version('Perl.pm')]};
 
-\=head1 NAME
-
-Term::Size::Perl::Params - parameters for Term::Size::Perl
-
-\=head1 SYNOPSIS
-
-    \$href = Term::Size::Perl::Params
-
-\=head1 DESCRIPTION
-
-The configuration parameters C<Term::Size::Perl> needs to
-know for retrieving the terminal size with C<ioctl>.
-
-\=cut
-
 sub params {
     return (
         winsize => {
@@ -140,6 +125,24 @@ sub params {
 
 1;
 
+\=pod
+
+\=head1 NAME
+
+Term::Size::Perl::Params - Configuration for Term::Size::Perl
+
+\=head1 SYNOPSIS
+
+    use Term::Size::Perl::Params ();
+
+    %%%%params = Term::Size::Perl::Params::params();
+
+\=head1 DESCRIPTION
+
+The configuration parameters C<Term::Size::Perl> needs to
+know for retrieving the terminal size with C<ioctl>.
+
+\=cut
 
 PARAMS
 
@@ -157,10 +160,6 @@ my $PROBE_TEMPLATE = sprintf <<PROBE;
  * configuration to make it possible using 
  * ioctl(., TIOCGWINSZ, .) to
  * get the terminal size via pure Perl code. 
- *
- *
- *
- *
  */
 
 #include <stdio.h>
