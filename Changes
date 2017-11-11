@@ -1,5 +1,8 @@
 Revision history for Perl extension Term-Size-Perl.
 
+        - proper POD for Term::Size::Perl::Params (CPAN RT#74219)
+        - POD typos (CPAN RT#74219)
+
 0.029 Tue Mar 11 2007
         - major rewrite of t/01_basic.t
           * added SKIP if tested globs are not tty

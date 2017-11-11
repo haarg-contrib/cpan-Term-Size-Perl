@@ -110,11 +110,15 @@ package Term::Size::Perl::Params;
 use vars qw(\$VERSION);
 \$VERSION = @{[MM->parse_version('Perl.pm')]};
 
-\=head1 Term::Size::Perl::Params
+\=head1 NAME
 
-\=head2 params
+Term::Size::Perl::Params - parameters for Term::Size::Perl
+
+\=head1 SYNOPSIS
 
     \$href = Term::Size::Perl::Params
+
+\=head1 DESCRIPTION
 
 The configuration parameters C<Term::Size::Perl> needs to
 know for retrieving the terminal size with C<ioctl>.
