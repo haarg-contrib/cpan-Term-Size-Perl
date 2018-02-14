@@ -62,8 +62,6 @@ have a look at:
 
 L<Term::Size>
 
-L<Term::Size::Unix>
-
 L<Term::Size::Win32>
 
 L<Term::Size::ReadKey>
