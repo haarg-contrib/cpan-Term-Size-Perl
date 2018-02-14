@@ -28,8 +28,16 @@ WriteMakefile(
         META_MERGE => {
             'dynamic_config' => 0,
             'meta-spec'      => { version => 2 },
-            'prereqs'        => { configure =>
-                  { recommends => { 'ExtUtils::Manifest' => '1.50' } } },
+            'prereqs' => {
+                configure =>
+                  { recommends => { 'ExtUtils::Manifest' => '1.50' } },
+                develop => {
+                    requires => {
+                        'Test::Pod'           => '1.18',
+                        'Test::Pod::Coverage' => '1.04',
+                    }
+                },
+            },
             'resources'      => {
                 repository => {
                     type => 'git',
