@@ -8,7 +8,7 @@ require Exporter;
 our @ISA = qw(Exporter);
 our @EXPORT_OK = qw(chars pixels);
 
-our $VERSION = '0.030_0';
+our $VERSION = '0.031';
 
 =head1 NAME
 

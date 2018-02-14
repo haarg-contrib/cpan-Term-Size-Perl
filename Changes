@@ -1,5 +1,11 @@
 Revision history for Perl extension Term-Size-Perl.
 
+0.031 Wed Feb 14 2018
+
+        - Makefile.PL: add Test::Pod{,::Coverage} as "develop" prereqs
+        - Enclose GitHub issues link in a link
+        - Don't mention deprecated Term::Size::Unix
+
 0.030_0 Tue Feb 13 2018
 
         - rewrite Makefile.PL
