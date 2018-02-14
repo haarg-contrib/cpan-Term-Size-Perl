@@ -142,6 +142,13 @@ Term::Size::Perl::Params - Configuration for Term::Size::Perl
 The configuration parameters C<Term::Size::Perl> needs to
 know for retrieving the terminal size with C<ioctl>.
 
+\=head1 FUNCTIONS
+
+\=head2 params
+
+The configuration parameters C<Term::Size::Perl> needs to
+know for retrieving the terminal size with C<ioctl>.
+
 \=cut
 
 PARAMS
